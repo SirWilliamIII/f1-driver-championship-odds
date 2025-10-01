@@ -1,0 +1,56 @@
+# Git
+.git
+.gitignore
+.kilocode/
+.qodo/
+.venv/
+.dockerignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation (but keep README.md for pyproject.toml)
+# README.md
+*.md
+!README.md
+
+# Cache (will be recreated in container)
+src/f1_driver_odds/cache/
+
+# Temp files
+*.tmp
+*.log
