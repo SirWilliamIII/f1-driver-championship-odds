@@ -1,56 +1,36 @@
-# Git
-.git
-.gitignore
-.kilocode/
-.qodo/
-.venv/
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-.env
-.venv
-env/
+.venv/
 venv/
+ENV/
+env/
+
+# FastF1 cache (will be created inside container)
+cache/
+
+# Git
+.git/
+.gitignore
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+.kilocode/
+.qodo/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Documentation (but keep README.md for pyproject.toml)
-# README.md
+# Documentation
+README.md
 *.md
-!README.md
 
-# Cache (will be recreated in container)
-src/f1_driver_odds/cache/
-
-# Temp files
-*.tmp
-*.log
+# Lock files (copied separately)
+uv.lock
