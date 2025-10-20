@@ -20,3 +20,4 @@ This web application provides live and historical data on the Formula 1 Driver's
 - **Charting:** Plotly.js
 - **Task Scheduling:** APScheduler
 - **Deployment:** Docker, Gunicorn
+

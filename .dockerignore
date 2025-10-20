@@ -4,7 +4,7 @@
 .kilocode/
 .qodo/
 .venv/
-.dockerignore
+
 # Python
 __pycache__/
 *.py[cod]
