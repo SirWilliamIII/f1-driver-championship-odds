@@ -172,7 +172,8 @@ def should_update_data() -> bool:
 
     try:
         current_year = datetime.now().year
-        schedule = fastf1.get_event_schedule(current_year)
+        # Force refresh of schedule by using force_ergast parameter
+        schedule = fastf1.get_event_schedule(current_year, backend='ergast')
         now = pd.Timestamp.now(tz="UTC")
         races_completed = 0
 
@@ -187,8 +188,11 @@ def should_update_data() -> bool:
             if race_date.tz is None:
                 race_date = race_date.tz_localize("UTC")
 
+            # Count race as complete if it happened (matches fetch_f1_data logic)
             if race_date < now:
                 races_completed += 1
+
+        logger.info(f"Race count check: stored={championship_data['races_completed']}, actual={races_completed}")
 
         if championship_data["races_completed"] < races_completed:
             logger.info(
