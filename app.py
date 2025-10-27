@@ -797,8 +797,9 @@ scheduler.add_job(
     replace_existing=True,
 )
 
-fetch_f1_data()
-preload_historical_data()
+# Temporarily disabled to allow Flask to start immediately
+# fetch_f1_data()
+# preload_historical_data()
 
 if __name__ == "__main__":
     app.run(debug=DEBUG_MODE, host=APP_HOST, port=APP_PORT)
